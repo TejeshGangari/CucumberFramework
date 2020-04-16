@@ -14,7 +14,8 @@ public class ReusableLibrary {
 	
 	public ReusableLibrary() {
 		try {
-			FileInputStream fi = new FileInputStream(new File("src/test/resources/properties.properties"));
+			FileInputStream fi = new FileInputStream(new File(System.getProperty("user.dir")+"\\myProp.properties"));
+			prop = new Properties();
 			prop.load(fi);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
